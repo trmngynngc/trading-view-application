@@ -10,7 +10,7 @@ import {
 // Used only to create transitions
 const muiTheme = createTheme();
 
-export function createComponents(config) {
+export function createComponent(config) {
     const { palette } = config;
 
     return {
@@ -46,6 +46,13 @@ export function createComponents(config) {
                 },
                 textSizeLarge: {
                     padding: '12px 16px'
+                }
+            }
+        },
+        MuiButtonBase: {
+            styleOverrides: {
+                root: {
+                    borderRadius: 14,
                 }
             }
         },
@@ -256,18 +263,34 @@ export function createComponents(config) {
                 }
             }
         },
+        MuiTabs: {
+            styleOverrides: {
+                root: {
+                    minHeight: 'unset',
+                    '& .MuiTabs-indicator': {
+                        display: 'none'
+                    }
+                }
+            }
+        },
         MuiTab: {
             styleOverrides: {
                 root: {
                     fontSize: 14,
-                    fontWeight: 500,
+                    fontWeight: 400,
                     lineHeight: 1.71,
                     minWidth: 'auto',
-                    paddingLeft: 0,
-                    paddingRight: 0,
+                    minHeight: 28,
+                    padding: "0 11px",
                     textTransform: 'none',
+                    color: palette.primary.main,
+                    backgroundColor: palette.primary.light,
+                    '&.Mui-selected': {
+                        backgroundColor: palette.primary.main,
+                        color: palette.primary.light,
+                    },
                     '& + &': {
-                        marginLeft: 24
+                        marginLeft: 4
                     }
                 }
             }

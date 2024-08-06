@@ -53,6 +53,11 @@ const SymbolSearchDialog = () => {
 
     return (
         <div className="flex justify-start">
+            {/*<Tabs value={1} onChange={() => console.log('hehe')} aria-label="basic tabs example">*/}
+            {/*    <Tab label="Item One" />*/}
+            {/*    <Tab label="Item One" />*/}
+            {/*    <Tab label="Item One" />*/}
+            {/*</Tabs>*/}
             <Button sx={{ px: 1.25, py: 0.625 }} onClick={handleClickOpen}
                     startIcon={<SearchIcon sx={{ color: '#131722' }} />}>
                 <div className="ml-0.5 text-[#131722] font-bold">BTCUSD</div>
